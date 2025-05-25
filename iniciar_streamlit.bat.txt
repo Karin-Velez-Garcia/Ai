@@ -1,0 +1,14 @@
+@echo off
+echo Verificando instalación de Streamlit...
+
+REM Ruta a tu ejecutable de Python
+set PYTHON_PATH="C:\Users\Usuario\AppData\Local\Programs\Python\Python313\python.exe"
+
+REM Intentar instalar Streamlit (silenciosamente)
+%PYTHON_PATH% -m pip install streamlit > nul 2>&1
+
+echo.
+echo Iniciando la aplicación con Streamlit...
+%PYTHON_PATH% -m streamlit run app.py
+
+pause
